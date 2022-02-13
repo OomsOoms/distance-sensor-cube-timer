@@ -4,9 +4,9 @@ A rubiks cube timer using a distance sensor and a raspberry pi 4, and possibly t
 
 ## How to use
 
-* Download the folder 'distance-sensor-cube-timer' and run the python script 'timer'.
+Download the folder 'distance-sensor-cube-timer' and run the python script 'timer'.
 
-* The electronics to make this consist of a raspberry pi 4 (I will be looking into using a pi pico), a bread board, jumper cables and a 
+The electronics to make this consist of a raspberry pi 4 (I will be looking into using a pi pico), a bread board, jumper cables and a 
 [Distance sensor](https://thepihut.com/products/ultrasonic-distance-sensor-hcsr04?variant=1054704288&currency=GBP&utm_medium=product_sync&utm_source=google&utm_content).
 Then follow the diagram below to connect the sensor to the pi.
 
@@ -22,4 +22,9 @@ The distance from the timer to activate it can be changed in the config file.
 
 If you want to contribute to the project please follow these
 
-All variables must be written in snake case e.g. distance_sensor
+* All variables must be written in snake case e.g. distance_sensor
+* Please use double quotes for strings
+* Make use of white sapce to make code more readable
+* Comment where necessary to add clarification
+
+This project uses [semantic versioning](https://semver.org/)
