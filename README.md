@@ -18,7 +18,7 @@ All the times and averages will be stored in /distance-sensor-cube-timer/times.t
 To start and stop the timer hold and object infront of the sensor for 1 second, when removed the timer will start, to stop the timer put and object back infront of the sensor, then repeat.
 The distance from the timer to activate it can be changed in the config file.
 
-## contribution
+## Contribution
 
 If you want to contribute to the project please follow these
 
