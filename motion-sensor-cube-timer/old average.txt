@@ -1,0 +1,45 @@
+ times = open("times.txt", "r")
+    times_list = times.readlines()
+
+    # getting the numbers out of the text document
+    number = len(times_list)
+
+    solve_1 = solve
+
+    number = number -2
+    solve_2 = times_list[number]
+    solve_2 = solve_2.split(" ")
+    solve_2 = solve_2[1]
+    solve_2 = solve_1.replace("\n", "")
+
+    number = number -1
+    solve_3 = times_list[number]
+    solve_3 = solve_3.split(" ")
+    solve_3 = solve_3[1]
+    solve_3 = solve_1.replace("\n", "")
+
+    number = number -1
+    solve_4 = times_list[number]
+    solve_4 = solve_4.split(" ")
+    solve_4 = solve_4[1]
+    solve_4 = solve_1.replace("\n", "")
+
+    number = number -1
+    solve_5 = times_list[number]
+    solve_5 = solve_5.split(" ")
+    solve_5 = solve_5[1]
+    solve_5 = solve_1.replace("\n", "")
+
+    # islotaing the numbers more 
+    average = [float(solve_1), float(solve_2), float(solve_3), float(solve_4), float(solve_5)]
+    low = min(average)
+    top = max(average)
+    average.remove(low)
+    average.remove(top)
+    
+        # maths
+    average = average[0] + average[1] + average[2]
+    average = average/3
+
+    times.writelines(f"{lines}. {solve} {average}\n")
+    times.close()

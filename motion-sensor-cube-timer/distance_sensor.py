@@ -17,9 +17,7 @@ GPIO.setup(GPIO_ECHO, GPIO.IN)
  
 def distance():
     # set Trigger to HIGH
-    import RPi.GPIO as GPIO
-    import time
-    GPIO.setwarnings(False)
+    
     GPIO.output(GPIO_TRIGGER, True)
  
     # set Trigger after 0.01ms to LOW
