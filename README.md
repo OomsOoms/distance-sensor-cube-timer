@@ -20,7 +20,7 @@ you can edit the file 'config.py' to chnage the delay, activation distance and a
 To start and stop the timer hold and object infront of the sensor, it must be within the distance set by 'config.py'in cm for it to register. hold the object
 infront of the sensor the amout of time set in 'config.py', when removed the timer will start, to stop the timer put and object back infront of the sensor, then repeat.
 
-you can change the input method by impoorting another module, make sure it outputs 1 and 0, for example, when there is something infront of the sensor it outputs 1.
+you can change the input method by impoorting another module, make sure it outputs True and False, for example, when there is something infront of the sensor it outputs True.
 
 ## Contribution
 
