@@ -1,11 +1,11 @@
 # distance-sensor-cube-timer
 
-A rubiks cube timer using a distance sensor and a raspberry pi 4, and possibly the pi pico to reduce size and cost Has all the base features i want to add the timer, it still only works on the raspberry pi and a distance sensor which can be coded to work with other things if it outputs True and False to stop and start the timer.
+A rubiks cube timer using a distance sensor and a raspberry pi 4, and possibly the pi pico to reduce size and cost. It has all the base features i want to add the timer, it still only works on the raspberry pi and a distance sensor which can be coded to work with other things if it outputs True and False to stop and start the timer.
 
 ## requirements
 
 to use the distance sensor as the input you need to run the command 'pip install RPi.gpio' in the terminal of the raspberry pi, or you will get an error. 
-the code can run on anything that can run python code, but you will need to chnage the input method to one that can be used on that platform.
+the code can run on anything that, so if you aren't using a raspberry pi, use an input method that doesn't use the pi's GPIO pins.
 
 ## how to use
 
