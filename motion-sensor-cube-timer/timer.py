@@ -1,35 +1,41 @@
-import RPi.GPIO as GPIO
-GPIO.setwarnings(False)
-
 import time
-from average_calculator import average_times
-from config import delay, activation_distance
+from config import average_size, function_name, delay
+from average_calculator import average
 from distance_sensor import distance
 
+timer_input = function_name
+
 while True:
-    go = 1
-    dist = distance()
-    if dist < activation_distance:
-        print("Ready!")
+    timer_input = function_name
+    
+    if timer_input:
+        print("Ready")
         time.sleep(delay)
-        dist = distance()
-        if dist < activation_distance:
-            check = 1
-            print("GO!")
-            while check == 1:
-                dist = distance()
-                if dist > activation_distance:
-                    print("Solve")
-                    start = time.perf_counter()
+        timer_input = function_name
+        
+        if timer_input:
+            print("go")
+            start = time.perf_counter()
+            time.sleep(delay)
+            
+            while True:
+                timer_input = function_name
+                if timer_input:
+                    stop = time.perf_counter()
+                    solve = stop - start
+                    solve -= delay
+                    solve = round(solve, 3)
+                    print(solve)
+                    
+                    with open("times.txt", "r") as times:
+                        times_list = times.readlines()
+                        times_number = len(times_list)
+                
+                    with open("times.txt", "a") as times:
+                        times.writelines(f"{times_number}. {solve}\n")
+                    average()
+
                     time.sleep(1)
-                    while go == 1:
-                        dist = distance()
-                        if dist < activation_distance:
-                            go = 0
-                            check = 0
-                            
-                            stop = time.perf_counter()
-                            solve = (stop-1-start)
-                            average_times()
-                            print("1")
-                            time.sleep(1)
+                    break
+                        
+        

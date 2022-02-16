@@ -1,21 +1,26 @@
-#https://tutorials-raspberrypi.com/raspberry-pi-ultrasonic-sensor-hc-sr04/
+# https://tutorials-raspberrypi.com/raspberry-pi-ultrasonic-sensor-hc-sr04/
+# I have edited the code since i copied it from the website
 
-#Libraries
+# Libraries
 import RPi.GPIO as GPIO
 import time
  
-#GPIO Mode (BOARD / BCM)
+# GPIO Mode (BOARD / BCM)
 GPIO.setmode(GPIO.BCM)
  
-#set GPIO Pins
+# set GPIO Pins
 GPIO_TRIGGER = 18
 GPIO_ECHO = 24
  
-#set GPIO direction (IN / OUT)
+# set GPIO direction (IN / OUT)
 GPIO.setup(GPIO_TRIGGER, GPIO.OUT)
 GPIO.setup(GPIO_ECHO, GPIO.IN)
  
 def distance():
+    import RPi.GPIO as GPIO
+    GPIO.setwarnings(False)
+    # imports settings from config file
+    from config import activation_distance
     # set Trigger to HIGH
     
     GPIO.output(GPIO_TRIGGER, True)
@@ -39,18 +44,7 @@ def distance():
     TimeElapsed = StopTime - StartTime
     # multiply with the sonic speed (34300 cm/s)
     # and divide by 2, because there and back
-    distance = (TimeElapsed * 34300) / 2
  
-    return distance
- 
-if __name__ == '__main__':
-    try:
-        while True:
-            dist = distance()
-            print ("Measured Distance = %.1f cm" % dist)
-            time.sleep(1)
- 
-        # Reset by pressing CTRL + C
-    except KeyboardInterrupt:
-        print("Measurement stopped by User")
-        GPIO.cleanup()
+    distance =  (TimeElapsed * 34300) / 2
+
+    return distance < activation_distance
