@@ -11,8 +11,6 @@ the code can run on anything that, so if you aren't using a raspberry pi, use an
 
 Download the folder 'distance-sensor-cube-timer' and run the python script 'timer' to start using the timer.
 
-there is now a settings menu, to open it press Ctrl + c and it will open the menu, to choose an option type a number and press enter.
-
 The electronics to make this consist of a raspberry pi 4 (I will be looking into using a pi pico), a bread board, jumper cables and a 
 [Distance sensor](https://thepihut.com/products/ultrasonic-distance-sensor-hcsr04?variant=1054704288&currency=GBP&utm_medium=product_sync&utm_source=google&utm_content).
 Then follow the diagram below to connect the sensor to the pi.
