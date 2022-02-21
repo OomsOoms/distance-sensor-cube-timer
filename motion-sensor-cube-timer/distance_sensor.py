@@ -4,6 +4,7 @@
 # Libraries
 import RPi.GPIO as GPIO
 import time
+GPIO.setwarnings(False)
  
 # GPIO Mode (BOARD / BCM)
 GPIO.setmode(GPIO.BCM)
