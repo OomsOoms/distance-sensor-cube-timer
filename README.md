@@ -4,6 +4,13 @@ A rubiks cube timer using a distance sensor and a raspberry pi 4, and possibly t
 
 It now Works on windows! kind of, it uses the enter key to start and stop the timer. it auto detects if you have the RPi.gpio module installed and runs and deletes necessary code if you dont have it.
 
+## To do
+Make the timer start with any key you want(may need the GUI)
+Make a GUI
+Scramble generator - 3x3
+update scramble generator for more WCA events
+make timer.txt compatible with your cstimer sessions
+
 ## requirements
 
 to use the distance sensor as the input you need to run the command 'pip install RPi.gpio' in the terminal of the raspberry pi, or you will get an error. 
